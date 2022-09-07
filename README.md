@@ -2,9 +2,8 @@
 
 > Status do Projeto: :heavy_check_mark: Concluído.
 
-
 <p align="center">
- <img width="650" src=""> 
+ <img width="650" src="https://github.com/Johnson49/web-browser/blob/main/gif/gif-browser.gif"> 
 </p>
 
 
