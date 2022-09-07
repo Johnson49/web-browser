@@ -5,6 +5,7 @@ from PyQt5.QtWebEngineWidgets import *
 from PyQt5.QtPrintSupport import * 
 import sys 
 
+
 class Window(QMainWindow): 
     def __init__(self, *args, **kwargs): 
         super(Window, self).__init__(*args, **kwargs) 
@@ -20,7 +21,7 @@ class Window(QMainWindow):
         #-----------------------------------
         self.setMinimumSize(600,700)
         self.showMaximized()
-        self.setWindowIcon(QIcon("C:/Users/Beel Sales/Desktop/Simeone/Python/Projeto browser/icones/web-search-engine.png"))
+        self.setWindowIcon(QIcon("./icones/web-search-engine.png"))
         #---------------------------
 
         self.setCentralWidget(self.abas) 
@@ -33,25 +34,25 @@ class Window(QMainWindow):
 
         #-----------------------------
 
-        botao_de_voltar_pagina = QAction(QIcon('C:/Users/Beel Sales/Desktop/Simeone/Python/Projeto browser/icones/seta-esquerda.png'), "Voltar - Ctrl+w", self) 
+        botao_de_voltar_pagina = QAction(QIcon('./icones/seta-esquerda.png'), "Voltar - Ctrl+w", self) 
         botao_de_voltar_pagina.setShortcut('Ctrl+w')
         botao_de_voltar_pagina.triggered.connect(lambda: self.abas.currentWidget().back()) 
         barra_de_navegacao.addAction(botao_de_voltar_pagina) 
         #-------------------------------------------------------
 
-        botao_avancar_pagina = QAction(QIcon('C:/Users/Beel Sales/Desktop/Simeone/Python/Projeto browser/icones/seta-direita.png'),"Avançar - Ctrl+e", self) 
+        botao_avancar_pagina = QAction(QIcon('./icones/seta-direita.png'),"Avançar - Ctrl+e", self) 
         botao_avancar_pagina.setShortcut('Ctrl+e')
         botao_avancar_pagina.triggered.connect(lambda: self.abas.currentWidget().forward()) 
         barra_de_navegacao.addAction(botao_avancar_pagina) 
         #-----------------------------------------------
 
-        botao_de_atualizar_pagina = QAction(QIcon('C:/Users/Beel Sales/Desktop/Simeone/Python/Projeto browser/icones/atualizar.png'),"Atualizar - Ctrl+r", self) 
+        botao_de_atualizar_pagina = QAction(QIcon('./icones/atualizar.png'),"Atualizar - Ctrl+r", self) 
         botao_de_atualizar_pagina.setShortcut('Ctrl+r')
         botao_de_atualizar_pagina.triggered.connect(lambda: self.abas.currentWidget().reload()) 
         barra_de_navegacao.addAction(botao_de_atualizar_pagina) 
         #-------------------------------------------------------
 
-        botao_da_pagina_inicial = QAction(QIcon('C:/Users/Beel Sales/Desktop/Simeone/Python/Projeto browser/icones/pagina-inicial.png'),"Home - Ctrl+h", self) 
+        botao_da_pagina_inicial = QAction(QIcon('./icones/pagina-inicial.png'),"Home - Ctrl+h", self) 
         botao_da_pagina_inicial.setShortcut('Ctrl+h')
         botao_da_pagina_inicial.triggered.connect(self.pagina_inicial) 
         barra_de_navegacao.addAction(botao_da_pagina_inicial) 
